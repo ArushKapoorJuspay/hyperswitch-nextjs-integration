@@ -1,5 +1,5 @@
 {
-  "name": "reloadhero-demo",
+  "name": "hyperswitch-nextjs-demo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@juspay-tech/hyper-js": "^1.3.0",
+    "@juspay-tech/hyperswitch-node": "^1.0.1",
+    "@juspay-tech/react-hyper-js": "^1.0.2",
     "@types/node": "20.3.3",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
