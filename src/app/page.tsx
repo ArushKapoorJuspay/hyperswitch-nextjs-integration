@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from "react"
+// @ts-ignore
 import styles from './page.module.css'
 // @ts-ignore
 import { loadHyper } from "@juspay-tech/hyper-js"
@@ -20,7 +21,7 @@ const Home: React.FC = ({ }) => {
       "amount": 6500,
       "business_country": "US",
       "business_label": "default",
-      "currency": "USD",
+      "currency": "EUR",
       "confirm": false,
       "capture_method": "automatic",
       "authentication_type": "three_ds",
@@ -31,7 +32,7 @@ const Home: React.FC = ({ }) => {
         "address": {
           "state": "zsaasdas",
           "city": "Banglore",
-          "country": "US",
+          "country": "DE",
           "line1": "sdsdfsdf",
           "line2": "hsgdbhd",
           "line3": "alsksoe",
@@ -61,7 +62,7 @@ const Home: React.FC = ({ }) => {
           "city": "San Fransico",
           "state": "California",
           "zip": "94122",
-          "country": "AT",
+          "country": "DE",
           "first_name": "joseph",
           "last_name": "Doe"
         },
@@ -78,7 +79,7 @@ const Home: React.FC = ({ }) => {
           method: "POST",
           headers: {
             "Content-type": "application/json; charset=UTF-8",
-            "api-key": "snd_c691ade6995743bd88c166ba509ff5da"
+            "api-key": "snd_FFp2aBB9PHcm9440n19VGuVrEPnkzYcwvQKd4RNfMQbp84xMIWzNZMKDzNquUG6C"
           },
           body: reqBody
         })
@@ -96,7 +97,7 @@ const Home: React.FC = ({ }) => {
   }, [])
 
   useEffect(() => {
-    setLoadHyperValue(loadHyper("pk_snd_3b33cd9404234113804aa1accaabe22f"));
+    setLoadHyperValue(loadHyper("pk_snd_0dfecde9384d4c6698f22ade8728b042"));
   }, [])
 
   useEffect(() => {
@@ -104,24 +105,61 @@ const Home: React.FC = ({ }) => {
       setOptions({
         clientSecret: clientSecret,
         appearance: {
-          theme: "midnight",
+          theme: "default",
+          variables: {
+            colorText: "#002e73",
+            colorPrimary: "#002e73",
+            borderRadius:"10px",
+            backgroundColor:"#ffffff"
+          },
+          rules:{
+            ".Input":{
+              border:"1px solid #cacdd1",
+              backgroundColor:"#ffffff",
+              borderRadius:"10px"
+            },
+            ".Tab":{
+              fontSize:"15px",
+              gap: "8px",
+              background:"#ffffff",
+              border: "1px solid transparent",
+              borderRadius:"10px",
+            },
+            ".Tab:hover":{
+              fontSize:"15px",
+              gap: "8px",
+              background:"#ffffff",
+              border: "1px solid transparent",
+              borderRadius:"10px",
+            },
+            ".TabMore":{
+              backgroundColor:"#ffffff",
+              border: "1px solid transparent",
+              borderRadius:"10px",
+            },
+            ".Tab--selected":{
+              backgroundColor:"#ffffff",
+              color:"#002e73",
+              border: "1px solid #002e73"
+            },
+            ".Tab:focus":{
+              border:"1px solid #002e73",
+              boxShadow: "#002e734c 0px 0px 0px 3px"
+            },
+            ".Label":{
+              color:"#6b7686"
+            },
+            ".Tab--selected:hover":{
+              background:"#ffffff",
+              color:"#002e73",
+              border:"1px solid #002e73"
+            }
+          }
         },
         fonts: [
           {
-            cssSrc: 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap'
-          },
-          {
-            cssSrc: 'https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Qwitcher+Grypen:wght@400;700&display=swap'
-          },
-          {
-            cssSrc: 'https://fonts.googleapis.com/css2?family=Combo&display=swap'
-          },
-          {
-            family: "something",
-            src: "https://fonts.gstatic.com/s/combo/v21/BXRlvF3Jh_fIhj0lDO5Q82f1.woff2",
-            weight: "700",
-          }
-        ],
+            cssSrc: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap'
+          },],
         locale: "en",
         loader: "always"
       })

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { FormEvent, useEffect, useState } from "react"
+// @ts-ignore
 import styles from './checkout.module.css'
 // @ts-ignore
 import { useHyper, useWidgets, UnifiedCheckout } from "@juspay-tech/react-hyper-js";
@@ -15,7 +16,20 @@ const CheckoutForm: React.FC = ({ }) => {
     const [message, setMessage] = useState("")
 
     const unifiedCheckoutOptions = {
-        layout: "tabs"
+        layout: { 
+            type: "tabs",
+            defaultCollapsed: false,
+            radios: true,
+            spacedAccordionItems: false,
+        },
+        wallets:{
+            walletReturnUrl: "http://localhost:3000/",
+            style: {
+                theme:"dark", 
+                type: "default", 
+                height: 48
+              }
+        }
     };
 
     const handlePaymentStatus = (status: string) => {
