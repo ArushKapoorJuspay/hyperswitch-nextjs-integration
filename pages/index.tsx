@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 // @ts-ignore
 import styles from './page.module.css'
 // @ts-ignore
-// import { loadHyper } from "@juspay-tech/hyper-js"
+import { loadHyper } from "@juspay-tech/hyper-js"
 // @ts-ignore
 import { HyperElements } from "@juspay-tech/react-hyper-js";
 
@@ -96,9 +96,9 @@ const Home: React.FC = ({ }) => {
     fetchData();
   }, [])
 
-  // useEffect(() => {
-  //   setLoadHyperValue(loadHyper("pk_snd_0dfecde9384d4c6698f22ade8728b042"));
-  // }, [])
+  useEffect(() => {
+    setLoadHyperValue(loadHyper("pk_snd_0dfecde9384d4c6698f22ade8728b042"));
+  }, [])
 
   useEffect(() => {
     if (clientSecret !== "") {
