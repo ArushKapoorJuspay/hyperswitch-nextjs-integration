@@ -18,10 +18,10 @@ const Home: React.FC = ({ }) => {
 
   useEffect(() => {
     const reqBody = JSON.stringify({
-      "amount": 6500,
+      "amount": 650000,
       "business_country": "US",
-      "business_label": "default",
-      "currency": "EUR",
+      "business_label": "Default",
+      "currency": "USD",
       "confirm": false,
       "capture_method": "automatic",
       "authentication_type": "three_ds",
@@ -32,7 +32,7 @@ const Home: React.FC = ({ }) => {
         "address": {
           "state": "zsaasdas",
           "city": "Banglore",
-          "country": "DE",
+          "country": "US",
           "line1": "sdsdfsdf",
           "line2": "hsgdbhd",
           "line3": "alsksoe",
@@ -62,7 +62,7 @@ const Home: React.FC = ({ }) => {
           "city": "San Fransico",
           "state": "California",
           "zip": "94122",
-          "country": "DE",
+          "country": "US",
           "first_name": "joseph",
           "last_name": "Doe"
         },
@@ -79,7 +79,7 @@ const Home: React.FC = ({ }) => {
           method: "POST",
           headers: {
             "Content-type": "application/json; charset=UTF-8",
-            "api-key": "snd_FFp2aBB9PHcm9440n19VGuVrEPnkzYcwvQKd4RNfMQbp84xMIWzNZMKDzNquUG6C"
+            "api-key": "snd_veraxauEuta29wKncXVASQThIcLUZDVenRDCbXT9isGPfLMqHMvJUTuOo3qg5r2B"
           },
           body: reqBody
         })
@@ -97,7 +97,7 @@ const Home: React.FC = ({ }) => {
   }, [])
 
   useEffect(() => {
-    setLoadHyperValue(loadHyper("pk_snd_0dfecde9384d4c6698f22ade8728b042"));
+    setLoadHyperValue(loadHyper("pk_snd_9a92bd166cde4889b478d2a8150b3d72"));
   }, [])
 
   useEffect(() => {
