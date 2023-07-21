@@ -79,7 +79,7 @@ const Home: React.FC = ({ }) => {
           method: "POST",
           headers: {
             "Content-type": "application/json; charset=UTF-8",
-            "api-key": "snd_veraxauEuta29wKncXVASQThIcLUZDVenRDCbXT9isGPfLMqHMvJUTuOo3qg5r2B"
+            "api-key": ""
           },
           body: reqBody
         })
@@ -97,7 +97,7 @@ const Home: React.FC = ({ }) => {
   }, [])
 
   useEffect(() => {
-    setLoadHyperValue(loadHyper("pk_snd_9a92bd166cde4889b478d2a8150b3d72"));
+    setLoadHyperValue(loadHyper(""));
   }, [])
 
   useEffect(() => {
